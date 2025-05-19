@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  background: #f0f0f0;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+h2 {
+  position: fixed;
+  top: 300px;
+  font-size: 2rem;
+  text-align: center;
+  user-select: none;
+  margin: 0;
+}
+
+.ColorDisplay {
+  position: fixed;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  user-select: none;
+}
+h1{
+  position: fixed;
+  bottom: 225px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  user-select: none;
+  pointer-events: none;
+}
+#copyBtn {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+#toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  font-size: 16px;
+  z-index: 1000;
+  user-select: none;
+}
+
+#toast.show {
+  opacity: 1;
+}
