@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Click Me.Colors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onclick="changeBackgroundColor()">
+
+  <!-- Hamburger Menu -->
+  <div class="hamburger" onclick="toggleSidebar(event)">&#9776;</div>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <!-- ← ที่นี่คือ Resize‐Handle -->
+    <div id="resize-handle">></div>
+
+    <!-- History Pane -->
+    <div class="sidebar-pane" id="history-pane">
+      <h3>
+        History
+        <img class="clear-btn" id="clearHistBtn"
+             src="close-bin.png" title="Clear History"
+             onmouseover="this.src='open-bin.png'"
+             onmouseout="this.src='close-bin.png'" />
+      </h3>
+      <ul id="history-list"></ul>
+    </div>
+
+    <!-- Favorites Pane -->
+    <div class="sidebar-pane" id="favorites-pane">
+      <h3>
+        Favorites
+        <img class="clear-btn" id="clearFavBtn"
+             src="close-bin.png" title="Clear Favorites"
+             onmouseover="this.src='open-bin.png'"
+             onmouseout="this.src='close-bin.png'" />
+      </h3>
+      <ul id="favorites-list"></ul>
+    </div>
+  </div>
+
+  <!-- Mode Buttons -->
+  <div class="mode-buttons">
+    <button id="hexBtn" class="mode-btn active">HEX</button>
+    <button id="rgbBtn" class="mode-btn">RGB</button>
+  </div>
+
+  <h2>Click Me</h2>
+
+  <div class="ColorDisplay">
+    <span id="colorCode">#FFFFFF</span>
+    <img src="copy.png" alt="Copy" id="copyBtn" onclick="copyColor(event)" />
+  </div>
+
+  <h1 id="colorName">White</h1>
+  <div id="toast">Copied!</div>
+   <!-- Share Button -->
+   <button id="shareBtn" class="share-btn" onclick="shareLink(event)" title="Share Palette">🔗</button>
+
+  <script src="color-names.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
